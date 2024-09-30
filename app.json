@@ -1,27 +1,33 @@
 {
   "expo": {
-    "name": "client",
-    "slug": "client",
+    "name": "Quick Bites",
+    "slug": "Quick-Bites",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/food-delivery.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/food-delivery.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f6ad88"
     },
     "ios": {
       "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "foregroundImage": "./assets/food-delivery.png",
+        "backgroundColor": "#f6ad88"
+      },
+      "package": "com.ghulammohiudin.client"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/food-delivery.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1dde74d8-d8ee-40c5-8000-368734bfbf13"
+      }
     }
   }
 }

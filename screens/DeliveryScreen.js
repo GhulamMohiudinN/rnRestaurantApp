@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Text, TouchableOpacity, View, Linking } from 'react-native'
 import { featured } from '../constants'
 import { useNavigation } from '@react-navigation/native';
 import MapView, { Marker } from 'react-native-maps';
@@ -13,6 +13,11 @@ export default function DeliveryScreen() {
     const restaurant = useSelector(selectRestaurant)
     const navigation = useNavigation();
     const dispatch = useDispatch()
+
+    const phoneNumber = '+923227028560';
+    const makeCall = () => {
+        Linking.openURL(`tel:${phoneNumber}`);
+    };
 
     const cancelOrder = () => {
         navigation.navigate('Home')
@@ -63,7 +68,7 @@ export default function DeliveryScreen() {
                         <Text className=' font-semibold text-white'>Your Rider</Text>
                     </View>
                     <View className='flex-row items-center space-x-3 mr-3'>
-                        <TouchableOpacity className='bg-white p-2 rounded-full'>
+                        <TouchableOpacity className='bg-white p-2 rounded-full' onPress={makeCall}>
                             <Icon.Phone fill={themeColors.bgColor(1)} strokeWidth={1} stroke={themeColors.bgColor(1)} />
                         </TouchableOpacity>
                         <TouchableOpacity onPress={cancelOrder} className='bg-white p-2 rounded-full'>

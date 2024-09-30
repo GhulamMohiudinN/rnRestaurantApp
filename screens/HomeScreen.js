@@ -6,7 +6,7 @@ import * as Icon from 'react-native-feather';
 import { themeColors } from '../theme';
 import Categories from '../components/categories';
 import FeaturedRow from '../components/featuredRow';
-import { featured } from '../constants';
+import { featured, featured2, featured3 } from '../constants';
 
 const HomeScreen = () => {
     return (
@@ -39,7 +39,7 @@ const HomeScreen = () => {
 
                 {/* Featured Rows */}
                 {
-                    [featured, featured, featured].map((item, index) => (
+                    [featured, featured2, featured3].map((item, index) => (
                         <FeaturedRow
                             key={index}
                             title={item.title}
